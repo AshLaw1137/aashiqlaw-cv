@@ -8,6 +8,7 @@ html{
   background-image: url(https://github.com/AshLaw1137/myImages/blob/master/darkWall.jpg?raw=true);
   background-repeat: repeat;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 body{
   left:0;
