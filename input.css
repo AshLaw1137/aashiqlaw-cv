@@ -224,3 +224,7 @@ button{
 #scroll{
   padding-bottom:0;
 }
+hr{
+  opacity: 0;
+}
+
