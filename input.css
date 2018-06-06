@@ -206,6 +206,7 @@ button{
 li{
   list-style-type: none;
   display:inline-block;
+  margin-top: 0.5em;
 }
 .projects{
   border-radius:15px;
