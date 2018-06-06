@@ -10,17 +10,21 @@
 <body>
   <div id="wrapped">
       <nav id="nav">
-        <h1 style="float:left">Aashiq Lawrence</h1>
+        <h1 style="float:left;display:inline-block">Aashiq Lawrence</h1>
+        <h3 style="display:inline-block">
+          <li class="li"><a href="#scroll">Home</a></li>
+          <li class="li"><a href="#div2">History</a></li>
+          <li class="li"><a href="#contact">Contact</a></li>
+        </h3>
       </nav>
       <article id="article">
         <h3 id="scroll">About Me:</h3>
-        <p style="width:80">
+        <p style="width:50%;text-align:left;"><img style="float:right; display:inline-block" id="image" src="https://github.com/AshLaw1137/myImages/blob/master/aashiqLaw.JPG?raw=true" alt="">
             Who I am, is a self-motivated, self-driven and hardworking young individual with
             an endeavor to grow and learn new things. Kind-hearted yet diligent,
             I believe that the self-creation and
             implementation of good-organizing and time-management leads to peak efficiency.
         </p>
-        <img id="image" src="https://github.com/AshLaw1137/myImages/blob/master/aashiqLaw.JPG?raw=true" alt="">
       <div>
       </article>
       <section id="section">
@@ -74,7 +78,7 @@
           <img style="border-radius:15px; width:22%; margin-left:auto; margin-right:auto; display:inline-block" src="https://github.com/AshLaw1137/Images/blob/master/screenshot-3.png?raw=true">
           <img style="border-radius:15px; width:22%; margin-left:auto; margin-right:auto; display:inline-block" src="https://github.com/AshLaw1137/Images/blob/master/screenshot-4.png?raw=true">
           <hr>
-          <h4>2013 - 2018: Oude Molen Academy of Science and Technology - Pinelands Cape Town</h4>
+          <h4 style="color:white">2013 - 2018: Oude Molen Academy of Science and Technology - Pinelands Cape Town</h4>
           <p>
             I attended OMAST undertaking subjects like Pure-Math, Physics, English, Afrikaans, Life Orientation,
             EGD (Engineering and Graphics Design) and Civil Engineering Technology.
@@ -83,13 +87,13 @@
       <section id="section2">
         <h3>Contact Details:</h3>
           <ul class="list">
-            <li style="padding:0.5em"><a href="mailto:aashiqlaw11@gmail.com">aashiqlaw11@gmail.com</a></li>
-            <li style="padding:0.5em"><a href="tel:0659935504">065-993-5504</a></li>
+            <li style="display:block;padding:0.5em"><a href="mailto:aashiqlaw11@gmail.com">aashiqlaw11@gmail.com</a></li>
+            <li style="display:block;padding:0.5em"><a href="tel:0659935504">065-993-5504</a></li>
           </ul>
-          <img style="width:22%; margin-left:auto; margin-right:auto; display:block" src="http://gifimage.net/wp-content/uploads/2017/08/ninja-gif-8.gif" alt="">
+          <img id="contact" style="width:22%; margin-left:auto; margin-right:auto; display:block" src="http://gifimage.net/wp-content/uploads/2017/08/ninja-gif-8.gif" alt="">
       </section>
       <footer id="footer">
-        <button id="scroll"><a href="#scroll">Going Up?</a></button>
+          <!-- <button id="scroll"></button> -->
         <p style="text-align: center; margin-top:15px">© Copyright 2018 a Developing Developer</p>
       </footer>
   </div>
@@ -106,6 +110,30 @@
           });
         });
       });
+
+      document.querySelectorAll('a[href^="#contact"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      document.querySelectorAll('a[href^="#div2"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
   });
+  // function SmoothScroll() {
+  //   e.preventDefault();
+  //   var target = $(this).attr("href");
+  //   $('html, body').animate({
+  //       scrollTop: $(""+target).offset().top
+  //   }, 2000);}
   </script>
 </html>
