@@ -15,6 +15,7 @@
           <li class="li"><a href="#scroll">Home</a></li>
           <li class="li"><a href="#div2">History</a></li>
           <li class="li"><a href="#contact">Contact</a></li>
+          <li class="li"><a href="#projects">Projects</a></li>
         </h3>
       </nav>
       <article id="article">
@@ -73,7 +74,7 @@
             like HTML, CSS, SASS, Javascript, Node as well as frameworks and libraries such as JQuery, Express and Bootstrap.
             As well as implementing Git into our projects.
           </p>
-          <img style="border-radius:15px; width:22%; margin-left:auto; margin-right:auto; display:inline-block" src="https://github.com/AshLaw1137/Images/blob/master/screenshot-1.png?raw=true">
+          <img id="projects" style="border-radius:15px; width:22%; margin-left:auto; margin-right:auto; display:inline-block" src="https://github.com/AshLaw1137/Images/blob/master/screenshot-1.png?raw=true">
           <img style="border-radius:15px; width:22%; margin-left:auto; margin-right:auto; display:inline-block" src="https://github.com/AshLaw1137/Images/blob/master/screenshot-2.png?raw=true">
           <img style="border-radius:15px; width:22%; margin-left:auto; margin-right:auto; display:inline-block" src="https://github.com/AshLaw1137/Images/blob/master/screenshot-3.png?raw=true">
           <img style="border-radius:15px; width:22%; margin-left:auto; margin-right:auto; display:inline-block" src="https://github.com/AshLaw1137/Images/blob/master/screenshot-4.png?raw=true">
@@ -121,6 +122,15 @@
       });
 
       document.querySelectorAll('a[href^="#div2"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      document.querySelectorAll('a[href^="#projects"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
           document.querySelector(this.getAttribute('href')).scrollIntoView({
