@@ -204,7 +204,8 @@ button{
   border:white 1px solid;
   border-radius:15px;
 }
-li{
+.li{
+  text-align: right;
   list-style-type: none;
   display:inline-block;
   margin-top: 0.5em;
