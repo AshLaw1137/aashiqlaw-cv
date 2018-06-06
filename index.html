@@ -13,6 +13,7 @@
         <h1 style="float:left;display:inline-block">Aashiq Lawrence</h1>
         <h3 style="float:right;display:inline-block">
           <li class="li"><a href="#scroll">Home</a></li>
+          <li class="li"><a href="#skills">Skills</a></li>
           <li class="li"><a href="#div2">History</a></li>
           <li style="margin-right:1em" class="li"><a href="#contact">Contact</a></li>
         </h3>
@@ -30,18 +31,18 @@
       <section id="section">
         <div style="padding-left:auto;padding-right:auto; text-align: center; padding-bottom:1em">
             <!-- icon images -->
-               <img class="icons" src="https://image.freepik.com/free-icon/github-logo-in-a-rounded-square_318-40761.jpg">
-               <img class="icons" src="https://image.freepik.com/free-icon/html-file-extension-interface-symbol_318-45345.jpg">
-               <img class="icons" src="https://n6-img-fp.akamaized.net/free-icon/css-file-format-with-brackets_318-45223.jpg?size=338&ext=jpg">
-               <img class="icons" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3omQSXSccBwGaO4Sb7UyUGPCOwFoiBL5SrcMjUx6_r6IiWpce">
-               <img class="icons" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTycTQs-pwCpt8S8WiL8BcX6qhZnwx8EmcRlPE638JSb0jGTiHlNA">
-               <img class="greyscale icons" src="https://qph.fs.quoracdn.net/main-qimg-d42672d4d185739d26257ed5c653c740" alt="nodeJs">
-               <img class="greyscale icons" src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg">
-               <img class="greyscale icons" src="https://www.worksonarm.com/wp-content/uploads/2017/03/mongodb-logo-1.png">
-           </div>
+            <img class="icons" src="https://image.freepik.com/free-icon/github-logo-in-a-rounded-square_318-40761.jpg">
+            <img class="icons" src="https://image.freepik.com/free-icon/html-file-extension-interface-symbol_318-45345.jpg">
+            <img class="icons" src="https://n6-img-fp.akamaized.net/free-icon/css-file-format-with-brackets_318-45223.jpg?size=338&ext=jpg">
+            <img class="icons" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3omQSXSccBwGaO4Sb7UyUGPCOwFoiBL5SrcMjUx6_r6IiWpce">
+            <img class="icons" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTycTQs-pwCpt8S8WiL8BcX6qhZnwx8EmcRlPE638JSb0jGTiHlNA">
+            <img class="greyscale icons" src="https://qph.fs.quoracdn.net/main-qimg-d42672d4d185739d26257ed5c653c740" alt="nodeJs">
+            <img class="greyscale icons" src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg">
+            <img class="greyscale icons" src="https://www.worksonarm.com/wp-content/uploads/2017/03/mongodb-logo-1.png">
+        </div>
       </section>
       <div id="div">
-        <h3>Attributes and Skills</h3>
+        <h3 id="skills">Attributes and Skills</h3>
           <ul>
             <li>Self-motivation And Drive</li>
             <li>Time Management</li>
@@ -79,7 +80,6 @@
           <img class="projects" src="https://github.com/AshLaw1137/Images/blob/master/screenshot-4.png?raw=true">
           <hr>
           <a style="padding:0" target="_blank" href="blog-sign-up.html"><img class="projects" src="https://github.com/AshLaw1137/Images/blob/master/blog-shot-1.png?raw=true"></a>
-          <a style="padding:0" target="_blank" href="blog-login.html"><img class="projects" src="https://github.com/AshLaw1137/Images/blob/master/blog-shot-2.png?raw=true"></a>
           <a style="padding:0" target="_blank" href="blog-posts-and-stuff.html"><img id="projects" class="projects" src="https://github.com/AshLaw1137/Images/blob/master/blog-shot-3.png?raw=true"></a>
           <a style="padding:0" target="_blank" href="quiz.html"><img id="projects" class="projects" src="https://github.com/AshLaw1137/Images/blob/master/Screen%20Shot%202018-06-06%20at%2012.16.19.png?raw=true"></a>
 
@@ -116,7 +116,6 @@
           });
         });
       });
-
       document.querySelectorAll('a[href^="#contact"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -125,7 +124,6 @@
           });
         });
       });
-
       document.querySelectorAll('a[href^="#div2"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -134,8 +132,15 @@
           });
         });
       });
-
       document.querySelectorAll('a[href^="#projects"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+      document.querySelectorAll('a[href^="#skills"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
           document.querySelector(this.getAttribute('href')).scrollIntoView({
