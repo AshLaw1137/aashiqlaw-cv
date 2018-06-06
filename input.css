@@ -207,3 +207,14 @@ li{
   list-style-type: none;
   display:inline-block;
 }
+.projects{
+  border-radius:15px;
+  width:22%;
+  margin-left:auto;
+  margin-right:auto;
+  display: inline-block;
+}
+.greyscale{
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);
+}
