@@ -43,6 +43,7 @@ body{
   background-color: white;
   opacity:0.8;
   width:100%;
+  max-height: 100px;
   top:0;
   left:0;
   padding-top:0;
@@ -98,6 +99,7 @@ p{
   /* transform:rotate(90deg); */
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+  margin-right: 2.1em;
 }
 #section{
   grid-area: section;
@@ -227,4 +229,80 @@ button{
 hr{
   opacity: 0;
 }
-
+@media screen and (max-width:763px){
+  body{
+    overflow-x: hidden;
+  }
+  #nav{
+    padding-left:0;
+  }
+  #nav h1{
+    padding-right:0;
+  }
+  #nav h3{
+    padding-left:0;
+    padding-right:0;
+  }
+  #div,#aside{
+    padding-left:0;
+    padding-right:0;
+    width:210px;
+  }
+  #article{
+    border-radius:0;
+    width:100%;
+    margin-top: 1.8em;
+  }
+  #aside{
+    width:250px;
+  }
+  #div2{
+    width:90%;
+    margin-left:0;
+    margin-right:0;
+  }
+}
+@media screen and (max-width:746px){
+  #wrapped{
+    padding-right:0;
+  }
+  #nav h1{
+    padding-left:0;
+    padding-bottom:0;
+  }
+  #nav h3{
+    display:block;
+    padding-top:0;
+  }
+  #section{
+    padding-left:0;
+  }
+}
+@media screen and (max-width:560px){
+  #article img,p{
+    display:block;
+  }
+  #article img{
+    float:right;
+  }
+  #article p{
+    float:left;
+  }
+  #nav h3{
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+@media screen and (max-width:481px){
+  #nav{
+    max-height:100%;
+  }
+  #nav h1{
+    margin-left:15px;
+  }
+  #nav li{
+    display:block;
+    margin-right:0;
+  }
+  
+}
